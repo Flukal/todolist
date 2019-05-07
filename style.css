@@ -1,0 +1,103 @@
+html{
+    margin:0;
+    padding: 0;
+    text-align: center;
+    font-size: 62.5%;
+    height: 100%;
+}
+body{
+    box-sizing: border-box;
+    font-family: "Segoe UI", Helvetica, sans;
+    background: linear-gradient(to bottom, blue, aqua);
+}
+
+#container{
+    width:100%;
+    max-width: 500px;
+    margin: auto;
+    color: white;
+}
+
+ul#todolist {
+    width: 100%;
+    list-style-type: none;
+    margin: auto;
+    max-width: 390px;
+    min-height: 120px;
+    text-align: center;
+    padding-inline-start: 0;
+}
+
+#buttons{
+    width: 50%;   
+}
+
+ul#todolist li {
+    box-sizing: border-box;
+    padding:1em;
+    background-color: rgba(255, 255, 255, .9);
+    color: #000;
+    margin: .5em;
+    cursor: pointer;
+}
+
+ul#todolist li:nth-child(n+2):before {
+    float: left;
+    content: ' ';
+    border:1px solid grey;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+ }
+
+ul#todolist li:nth-child(n+2):after {
+    float: right;
+    content: '\00D7';
+    border:0px ;
+    width: 10px;
+    height: 10px;
+    color:red;
+    font-weight: bold;
+    font-size: 1.4rem;
+    position: relative;
+    bottom: 2px;
+}
+
+ul#todolist li.checked {
+    text-decoration: line-through;
+}
+
+ul#todolist li.hidden {
+    display: none; 
+}
+
+ul#todolist li.checked:before {
+    border: 2px solid red;
+    border-left-width: 0;
+    border-top-width: 0;
+    transform: rotate(45deg);
+    height: 16px;
+    width:6px;
+    left:5px;
+    position: relative;
+    bottom : 4px;
+}
+
+#todo{
+    width: 100%;
+    border:1px solid grey;
+    border-radius: 15px;
+    padding:5px;
+    box-sizing: border-box;
+}
+
+#showCompleteBtn{
+    width: 100%;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
